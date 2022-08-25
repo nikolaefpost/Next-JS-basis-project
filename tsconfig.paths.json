@@ -1,0 +1,61 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./app/",
+    "paths": {
+      "@/*": [
+        "./*"
+      ],
+      "@components/*": [
+        "components/*"
+      ],
+      "@hooks/*": [
+        "hooks/*"
+      ],
+      "@hooks": [
+        "hooks/"
+      ],
+      "@providers/*": [
+        "providers/*"
+      ],
+      "@providers": [
+        "providers/"
+      ],
+      "@types/*": [
+        "types/*"
+      ],
+      "@types": [
+        "components/"
+      ],
+      "@styles/*": [
+        "styles/*"
+      ],
+      "@styles": [
+        "styles/"
+      ],
+      "@utils/*": [
+        "utils/*"
+      ],
+      "@utils": [
+        "utils/"
+      ],
+      "@layouts/*": [
+        "component/layouts/*"
+      ],
+      "@layouts": [
+        "component/layouts/"
+      ],
+      "@screens/*": [
+        "component/screens/*"
+      ],
+      "@screens": [
+        "component/screens/"
+      ],
+      "@api/*": [
+        "api/*"
+      ],
+      "@api": [
+        "api/"
+      ]
+    }
+  }
+}

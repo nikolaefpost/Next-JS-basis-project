@@ -1,0 +1,9 @@
+@import "mixins";
+@import "colors";
+
+.home{
+  max-width: 1440px;
+  margin: 0 auto;
+  @include display-flex;
+  background: $diamond_dust;
+}
