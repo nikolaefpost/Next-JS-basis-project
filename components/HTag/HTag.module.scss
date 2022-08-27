@@ -1,0 +1,13 @@
+@import "styles/_mixins.scss";
+@import "styles/_colors.scss";
+
+.h1{
+    @include fonts(500, 26px, 35px, $accent);
+}
+
+.h2{
+  @include fonts(500, 22px, 30px, $accent);
+}
+.h3{
+  @include fonts(600, 20px, 27px, $accent);
+}
