@@ -1,7 +1,7 @@
 import React from "react";
 import Head from 'next/head';
 import styles from '../styles/Home.module.scss';
-import { HTag } from "../components";
+import {Button, HTag} from "../components";
 
 
 export default function Home(): JSX.Element {
@@ -18,7 +18,9 @@ export default function Home(): JSX.Element {
             <div className={styles.container}>
 
                 <div className={styles.home}>
-                    <HTag tag="h1">TEXT</HTag>
+                    <HTag  tag="h1">TEXT</HTag>
+                    <Button appearance="primary" >click me</Button>
+                    <Button appearance="ghost">click me</Button>
                 </div>
             </div>
         </>
