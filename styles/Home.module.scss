@@ -5,6 +5,7 @@
   max-width: 1440px;
   margin: 0 auto;
   @include display-flex;
+  flex-direction: column;
   background: $diamond_dust;
-  height: 100vh;
+  //height: 100vh;
 }

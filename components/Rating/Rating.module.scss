@@ -1,0 +1,17 @@
+@import "styles/_mixins.scss";
+@import "styles/_colors.scss";
+
+.rating{
+
+  & .star{
+    margin-right: 5px;
+  }
+
+  & .isEditable{
+    cursor: pointer;
+  }
+
+  & .filled{
+    fill: $primary;
+  }
+}

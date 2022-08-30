@@ -1,0 +1,14 @@
+@import "styles/_mixins.scss";
+@import "styles/_colors.scss";
+
+.content{
+  @include fonts(400, 16px, 24px, $accent);
+}
+
+.p14{
+  font-size: 14px;
+}
+
+.p18{
+  @include fonts(400, 18px, 29px, $accent);
+}
