@@ -1,0 +1,33 @@
+@import "styles/_mixins.scss";
+@import "styles/_colors.scss";
+
+.page_component{
+  padding-right: 90px;
+  margin-top: 10px;
+
+  & .title{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: baseline;
+    justify-items: left;
+    gap: 20px;
+  }
+
+  & .product{
+
+  }
+
+  & .hh_title{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: baseline;
+    justify-items: left;
+    gap: 20px;
+  }
+
+
+  @media screen and (max-width: 765px){
+    padding-right: 0;
+  }
+}

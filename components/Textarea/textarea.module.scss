@@ -1,0 +1,17 @@
+@import "styles/_mixins.scss";
+@import "styles/_colors.scss";
+
+.input{
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  @include fonts(400, 16px, 22px, $accent);
+  padding: 7px 15px;
+  border: none;
+  outline-color: $primary;
+  background: $white;
+  font-family: 'Noto Sans', sans-serif;
+
+  &::placeholder {
+    color: #A4A4A4;
+  }
+}

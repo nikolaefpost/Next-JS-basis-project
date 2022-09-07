@@ -1,39 +1,62 @@
 @import "styles/_mixins.scss";
 @import "styles/_colors.scss";
 
+//.content{
+//  background: $primary;
+//  padding: 27px 32px 23px;
+//  @include display-flex(space-between);
+//  @include fonts(500, 16px, 22px, $white);
+//
+//  & .links{
+//    @include display-flex;
+//    gap: 40px;
+//
+//    & a{
+//      cursor: pointer;
+//
+//      &:hover{
+//        color: $green-light;
+//      }
+//    }
+//  }
+//  @media screen and (max-width: 765px){
+//    background: $primary;
+//    padding: 16px 0;
+//    gap: 16px;
+//    @include display-flex;
+//    flex-direction: column;
+//
+//    & h4{
+//      height: auto;
+//    }
+//
+//    & .links{
+//      @include display-flex;
+//      flex-direction: column;
+//      gap: 16px;
+//    }
+//  }
+//}
+
 .content{
   background: $primary;
-  padding: 27px 32px 23px;
-  @include display-flex(space-between);
+  padding: 25px 30px;
   @include fonts(500, 16px, 22px, $white);
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 40px;
 
-  & .links{
-    @include display-flex;
-    gap: 40px;
+  & a{
+    cursor: pointer;
 
-    & a{
-      cursor: pointer;
-
-      &:hover{
-        color: $green-light;
-      }
+    &:hover{
+      color: $green-light;
     }
   }
+
   @media screen and (max-width: 765px){
-    background: $primary;
-    padding: 16px 0;
+    grid-template-columns: 1fr;
+    justify-items: center;
     gap: 16px;
-    @include display-flex;
-    flex-direction: column;
-
-    & h4{
-      height: auto;
-    }
-
-    & .links{
-      @include display-flex;
-      flex-direction: column;
-      gap: 16px;
-    }
   }
 }

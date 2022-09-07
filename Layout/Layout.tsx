@@ -5,6 +5,7 @@ import Sidebar from './Sidebar/Sidebar';
 import {LayoutProps} from "./Layout.props";
 
 import styles from "./Layout.module.scss";
+import {AppContextProvider, IAppContext} from "../context/app.context";
 
 
 const Layout: FC<LayoutProps> = ({children}) => {
@@ -21,12 +22,14 @@ const Layout: FC<LayoutProps> = ({children}) => {
 
 export default Layout;
 
-export const withLayout = <T extends Record<string, unknown>>(Component: FunctionComponent<T>) => {
+export const withLayout = <T extends Record<string, unknown> & IAppContext>(Component: FunctionComponent<T>) => {
     return function withLayoutComponent(props: T): JSX.Element {
         return (
-            <Layout>
-                <Component {...props} />
-            </Layout>
+            <AppContextProvider menu={props.menu} firstCategory={props.firstCategory}>
+                <Layout>
+                    <Component {...props} />
+                </Layout>
+            </AppContextProvider>
         );
     };
 };

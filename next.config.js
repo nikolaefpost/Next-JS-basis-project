@@ -2,6 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  env: {
+    SERVER_API: "https://webapplication120220426093502.azurewebsites.net",
+  },
 
   webpack(config) {
     config.module.rules.push({

@@ -1,0 +1,12 @@
+@import "styles/_mixins.scss";
+@import "styles/_colors.scss";
+
+.sidebar{
+  display: grid;
+  align-content: start;
+  gap: 20px;
+
+  & .logo{
+    margin-top: 4px;
+  }
+}

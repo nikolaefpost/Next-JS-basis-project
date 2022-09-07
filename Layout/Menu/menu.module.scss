@@ -1,0 +1,78 @@
+@import "styles/_mixins.scss";
+@import "styles/_colors.scss";
+
+.menu{
+  margin-top: 10px;
+
+  & .firstLevel{
+    display: grid;
+    grid-template-columns: 24px 1fr;
+    gap: 20px;
+    align-items: center;
+    @include fonts(500, 18px, 25px, $accent-light);
+    //margin-top: 20px;
+
+    &:hover{
+      color: $primary;
+
+      & svg{
+        fill: $primary;
+      }
+    }
+  }
+
+  & .active{
+    color: $primary;
+
+    & svg{
+      fill: $primary;
+    }
+  }
+
+  & .secondBlock{
+    margin: 15px 0 0 12px;
+    padding-left: 32px;
+    border-left: 1px solid #DFDFDF;
+
+
+    & .secondLevel{
+      margin-bottom: 10px;
+      cursor: pointer;
+      text-transform: uppercase;
+      @include fonts(300, 12px, 16px, $accent-light);
+      //display: none;
+    }
+
+    & .secondLevelBlock{
+      display: none;
+    }
+
+    & .open{
+      display: block;
+
+      &:last-child{
+        margin-bottom: 20px;
+      }
+    }
+
+    //& .open:last-child{
+    //  margin-bottom: 20px;
+    //}
+  }
+
+  & .thirdLevel{
+    margin-bottom: 10px;
+    @include fonts(500, 14px, 19px, #787D85);
+    cursor: pointer;
+    display: block;
+
+    &:hover{
+      color: $primary;
+    }
+  }
+
+  & .third_active{
+    color: $primary;
+  }
+
+}

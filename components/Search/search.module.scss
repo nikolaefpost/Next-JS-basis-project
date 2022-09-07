@@ -1,0 +1,13 @@
+@import "styles/_mixins.scss";
+@import "styles/_colors.scss";
+
+.search{
+  position: relative;
+
+  & svg{
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    cursor: pointer;
+  }
+}

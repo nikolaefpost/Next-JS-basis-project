@@ -4,6 +4,10 @@
 .wrapper{
   display: grid;
   min-height: 100vh;
+  max-width: 1570px;
+  margin: 0 auto;
+  gap: 30px 20px;
+  background: #F5F6F8;
   grid-template-columns: auto 230px minmax(320px, 1200px) auto;
   grid-template-rows: auto 1fr auto;
   grid-template-areas:
@@ -20,6 +24,7 @@
   }
   & .body{
     grid-area: body;
+
   }
   & .footer{
     grid-area: footer;
@@ -32,6 +37,7 @@
   "header"
   "body"
   "footer";
+    padding: 0 20px;
 
     & .header{
       display: block;

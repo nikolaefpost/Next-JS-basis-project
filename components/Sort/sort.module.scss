@@ -1,0 +1,30 @@
+@import "styles/_mixins.scss";
+@import "styles/_colors.scss";
+
+.sort {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: end;
+
+  & span{
+    @include fonts(400, 16px, 22px, #000000);
+    cursor: pointer;
+
+    & svg{
+      visibility: hidden;
+      margin-right: 8px;
+    }
+
+    .hidden{
+      visibility: visible;
+    }
+  }
+
+  & .active{
+    color: $primary;
+  }
+
+
+
+}
