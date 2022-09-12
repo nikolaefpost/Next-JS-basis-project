@@ -9,7 +9,6 @@ import {useRouter} from "next/router";
 const Search: FC<SearchProps> = ({className, ...props}) => {
     const router = useRouter();
     const [searchValue, setSearchValue] = useState<string>("");
-    console.log(searchValue);
 
     const onHandledChange = (e: React.FormEvent<HTMLInputElement>):void =>{
         setSearchValue(e.currentTarget.value);

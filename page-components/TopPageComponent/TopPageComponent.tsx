@@ -1,6 +1,6 @@
 import React, {FC, useReducer} from 'react';
 import {TopPageComponentProps} from './TopPageComponent.props';
-import {Advantages, HTag, Skills, Sort, Tag} from "../../components";
+import {Advantages, HTag, Product, Skills, Sort, Tag} from "../../components";
 
 import styles from "./TopPageComponent.module.scss"
 import HHData from "../../components/HHData/HHData";
@@ -26,8 +26,8 @@ const TopPageComponent: FC<TopPageComponentProps> = ({page, products, firstCateg
                 <Sort setSort={onHandledSort} sort={sort}/>
             </div>
             <div className={styles.product}>
-                {products && products.map(item=>(
-                    <div key={item._id}>{item.title}</div>
+                {sortedProducts && sortedProducts.map(item=>(
+                    <Product product={item} key={item._id}/>
                 ))}
             </div>
             <div className={styles.hh_title}>

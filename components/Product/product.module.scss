@@ -1,0 +1,140 @@
+@import "styles/_mixins.scss";
+@import "styles/_colors.scss";
+
+.product{
+  display: grid;
+  grid-template-columns: [start] 70px [logoend] 30px [titlestart] calc(50% - 100px)  [midle] 1fr [pricestart] auto [priceend] 40px [creditstart] auto [creditend] 40px [ratestart] auto  [end];
+  margin-bottom: 30px;
+  padding: 30px;
+
+  .logo{
+    grid-column: start / logoend;
+    grid-row: 1 / span 2;
+
+    & img{
+      border-radius: 5px;
+    }
+  }
+
+  .title, .tags{
+    grid-column: titlestart / midle;
+  }
+
+  .title{
+    @include fonts(600, 20px, 27px, $accent);
+    align-self: end;
+  }
+
+  .tags{
+    margin-top: 9px;
+  }
+
+  .price, .priceTitle{
+    grid-column: pricestart / priceend;
+  }
+
+  .price, .credit{
+    @include fonts(400, 20px, 27px, $accent);
+    align-self: end;
+    @include display-flex;
+
+    & div{
+      margin-left: 5px;
+    }
+  }
+
+  .credit, .creditTitle{
+    grid-column: creditstart / creditend;
+
+
+    & span{
+      @include fonts(400, 14px, 19px, $accent);
+    }
+  }
+
+  .rate, .rateTitle{
+    grid-column: ratestart / end;
+  }
+
+  .rate{
+    align-self: end;
+  }
+
+  .priceTitle, .creditTitle, .rateTitle{
+    @include fonts(300, 14px, 19px, $accent);
+    align-self: center;
+  }
+
+  .description {
+    grid-column: start / end;
+    @include fonts(400, 16px, 24px, $accent);
+    margin-bottom: 14px;
+  }
+
+  .feature{
+    grid-column: start / midle;
+
+    & .characteristics{
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 15px;
+      padding-right: 60px;
+
+      & div:first-child{
+        @include fonts(700, 16px, 32px, $accent);
+      }
+
+      & div:last-child{
+        @include fonts(500, 16px, 22px, $accent);
+      }
+
+      & .line{
+        height: 1px;
+        border-bottom: 1px dashed #C4C4C4;
+      }
+    }
+  }
+
+  .adv_block{
+    grid-column: midle / end;
+    @include fonts(400, 16px, 22px, $accent);
+
+    & .advantages, .disadvantages{
+      padding-left: 15px;
+
+      & div:first-child{
+        font-weight: 700;
+        margin-bottom: 5px;
+      }
+    }
+
+    & .advantages{
+      border-left: 2px solid $green;
+    }
+
+    .disadvantages{
+      margin-top: 25px;
+      border-left: 2px solid #FC836D;
+
+    }
+  }
+
+
+  hr{
+    grid-column: start / end;
+    width: 100%;
+    height: 1px;
+    border: none;
+    background: $border;
+    margin: 18px 0 22px;
+  }
+
+  .actions{
+    grid-column: start / end;
+
+    & button:last-child{
+      margin-left: 20px;
+    }
+  }
+}

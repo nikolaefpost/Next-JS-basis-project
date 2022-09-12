@@ -11,5 +11,6 @@ import Sort from "./Sort/Sort";
 import Input from "./Input/Input";
 import Textarea from "./Textarea/Textarea";
 import Search from "./Search/Search";
+import Product from "./Product/Product";
 
-export { HTag, Button, PTag, Tag, Rating, Card, HhData, Advantages, Skills, Sort, Input, Textarea, Search };
+export { HTag, Button, PTag, Tag, Rating, Card, HhData, Advantages, Skills, Sort, Input, Textarea, Search, Product };
