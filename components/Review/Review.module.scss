@@ -1,0 +1,72 @@
+@import "styles/_mixins.scss";
+@import "styles/_colors.scss";
+
+.review {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  column-gap: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid $grey-light;
+  grid-template-areas:
+          "title date rate"
+          " description description description";
+  align-items: center;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  & .title {
+    grid-area: title;
+    @include display-flex(flex-start);
+    gap: 10px;
+
+    & div{
+      @include display-flex;
+      gap: 10px;
+
+      & span{
+        @include fonts(700, 14px, 24px, $accent);
+      }
+    }
+
+    & span {
+      @include fonts(400, 14px, 19px, $accent);
+    }
+  }
+
+  & .date {
+    grid-area: date;
+  }
+
+  & .rate {
+    grid-area: rate;
+  }
+
+  & .description {
+    grid-area: description;
+    margin-top: 10px;
+    @include fonts(400, 14px, 24px, $accent);
+    text-align: justify;
+  }
+
+  @media screen and (max-width: 765px) {
+    grid-template-columns: 1fr  auto;
+    grid-template-areas:
+          "title title"
+          "description description"
+          "date rate";
+
+    & .description {
+      margin-bottom: 10px;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    & .title {
+      flex-direction: column;
+      @include display-flex(flex-start, flex-start);
+    }
+  }
+}

@@ -27,7 +27,11 @@
   }
 
 
-  @media screen and (max-width: 765px){
+  @media screen and (max-width: 680px){
     padding-right: 0;
+
+    & .title{
+      grid-template-columns: auto 1fr;
+    }
   }
 }

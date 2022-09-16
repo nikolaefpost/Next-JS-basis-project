@@ -1,66 +1,66 @@
 @import "styles/_mixins.scss";
 @import "styles/_colors.scss";
 
-.product{
+.product {
   display: grid;
   grid-template-columns: [start] 70px [logoend] 30px [titlestart] calc(50% - 100px)  [midle] 1fr [pricestart] auto [priceend] 40px [creditstart] auto [creditend] 40px [ratestart] auto  [end];
-  margin-bottom: 30px;
+  margin-top: 30px;
   padding: 30px;
 
-  .logo{
+  .logo {
     grid-column: start / logoend;
     grid-row: 1 / span 2;
 
-    & img{
+    & img {
       border-radius: 5px;
     }
   }
 
-  .title, .tags{
+  .title, .tags {
     grid-column: titlestart / midle;
   }
 
-  .title{
+  .title {
     @include fonts(600, 20px, 27px, $accent);
     align-self: end;
   }
 
-  .tags{
+  .tags {
     margin-top: 9px;
   }
 
-  .price, .priceTitle{
+  .price, .priceTitle {
     grid-column: pricestart / priceend;
   }
 
-  .price, .credit{
+  .price, .credit {
     @include fonts(400, 20px, 27px, $accent);
     align-self: end;
     @include display-flex;
 
-    & div{
+    & div {
       margin-left: 5px;
     }
   }
 
-  .credit, .creditTitle{
+  .credit, .creditTitle {
     grid-column: creditstart / creditend;
 
 
-    & span{
+    & span {
       @include fonts(400, 14px, 19px, $accent);
     }
   }
 
-  .rate, .rateTitle{
+  .rate, .rateTitle {
     grid-column: ratestart / end;
   }
 
-  .rate{
+  .rate {
     align-self: end;
   }
 
-  .priceTitle, .creditTitle, .rateTitle{
+  .priceTitle, .creditTitle, .rateTitle {
     @include fonts(300, 14px, 19px, $accent);
     align-self: center;
   }
@@ -71,49 +71,49 @@
     margin-bottom: 14px;
   }
 
-  .feature{
+  .feature {
     grid-column: start / midle;
 
-    & .characteristics{
+    & .characteristics {
       display: grid;
       grid-template-columns: auto 1fr auto;
       align-items: center;
       gap: 15px;
       padding-right: 60px;
 
-      & div:first-child{
+      & span:first-child {
         @include fonts(700, 16px, 32px, $accent);
       }
 
-      & div:last-child{
+      & span:last-child {
         @include fonts(500, 16px, 22px, $accent);
       }
 
-      & .line{
-        height: 1px;
+      & .line {
         border-bottom: 1px dashed #C4C4C4;
+        margin-top: 5px;
       }
     }
   }
 
-  .adv_block{
+  .adv_block {
     grid-column: midle / end;
     @include fonts(400, 16px, 22px, $accent);
 
-    & .advantages, .disadvantages{
+    & .advantages, .disadvantages {
       padding-left: 15px;
 
-      & div:first-child{
+      & div:first-child {
         font-weight: 700;
         margin-bottom: 5px;
       }
     }
 
-    & .advantages{
+    & .advantages {
       border-left: 2px solid $green;
     }
 
-    .disadvantages{
+    .disadvantages {
       margin-top: 25px;
       border-left: 2px solid #FC836D;
 
@@ -121,7 +121,7 @@
   }
 
 
-  hr{
+  hr {
     grid-column: start / end;
     width: 100%;
     height: 1px;
@@ -130,11 +130,162 @@
     margin: 18px 0 22px;
   }
 
-  .actions{
+  .actions {
     grid-column: start / end;
 
-    & button:last-child{
+    & button:last-child {
       margin-left: 20px;
     }
   }
+
+
+  @media screen and(max-width: 1400px) {
+    grid-template-columns:  70px  30px  auto 40px  auto  40px  1fr;
+    grid-template-areas:
+            "logo . title title title title title "
+            "logo . tags tags tags tags tags"
+            "price price price . credit . rate"
+            "priceTitle priceTitle priceTitle . creditTitle . rateTitle"
+            "hr hr hr hr hr hr hr"
+            "description description description description description description description"
+            "feature feature feature feature feature feature feature"
+            "adv_block adv_block adv_block adv_block adv_block adv_block adv_block"
+            "hr2 hr2 hr2 hr2 hr2 hr2 hr2"
+            "actions actions actions actions actions actions actions";
+
+    .logo {
+      grid-area: logo;
+      margin-bottom: 20px;
+    }
+
+    .title{
+      grid-area: title;
+    }
+
+    .tags{
+      grid-area: tags;
+    }
+
+    .price{
+      grid-area: price;
+    }
+
+    .credit{
+      grid-area: credit;
+    }
+
+    .rate{
+      grid-area: rate;
+    }
+
+    .priceTitle{
+      grid-area: priceTitle;
+    }
+
+    .creditTitle{
+      grid-area: creditTitle;
+    }
+
+    .rateTitle{
+      grid-area: rateTitle;
+    }
+
+    .hr{
+      grid-area: hr;
+    }
+
+    .description{
+      grid-area: description;
+    }
+
+    .feature{
+      grid-area: feature;
+      margin-bottom: 20px;
+    }
+
+    .adv_block{
+      grid-area: adv_block;
+    }
+
+    .hr2{
+      grid-area: hr2;
+    }
+
+    .actions{
+      grid-area: actions;
+    }
+  }
+
+  @media screen and(max-width: 640px) {
+    grid-template-columns:  70px  30px 1fr;
+    grid-template-areas:
+            "logo . title  "
+            "logo . tags "
+            "priceTitle priceTitle price"
+            "creditTitle creditTitle credit"
+            "rateTitle rateTitle rate"
+            "hr hr hr"
+            "description description description"
+            "feature feature feature "
+            "adv_block adv_block adv_block"
+            "hr2 hr2 hr2"
+            "actions actions actions";
+
+    .price,  .credit, .rate{
+      justify-self: start;
+      margin-bottom: 10px;
+    }
+
+    .tags{
+      margin-bottom: 20px;
+    }
+  }
+
+  @media screen and(max-width: 480px) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+            "logo"
+            "title"
+            "tags"
+            "priceTitle"
+            "price"
+            "creditTitle"
+            "credit"
+            "rateTitle"
+            "rate"
+            "hr"
+            "description"
+            "feature"
+            "adv_block"
+            "hr2"
+            "actions";
+
+    .actions {
+      @include display-flex();
+      flex-direction: column;
+      gap: 15px;
+
+      & button{
+        width: 100%;
+
+        &:last-child{
+          margin: 0;
+        }
+
+      }
+    }
+
+  }
+}
+
+.review{
+  max-height: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.is_open{
+  padding: 30px;
+  //height: auto;
+  max-height: fit-content;
 }

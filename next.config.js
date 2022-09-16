@@ -5,7 +5,9 @@ const nextConfig = {
   env: {
     SERVER_API: "https://webapplication120220426093502.azurewebsites.net",
   },
-
+  images: {
+    domains: ['courses-top.ru']
+  },
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
