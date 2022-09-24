@@ -13,5 +13,6 @@ import Textarea from "./Textarea/Textarea";
 import Search from "./Search/Search";
 import Product from "./Product/Product";
 import Review from "./Review/Review";
+import ReviewForm from "./ReviewForm/ReviewForm";
 
-export { HTag, Button, PTag, Tag, Rating, Card, HhData, Advantages, Skills, Sort, Input, Textarea, Search, Product, Review };
+export { HTag, Button, PTag, Tag, Rating, Card, HhData, Advantages, Skills, Sort, Input, Textarea, Search, Product, Review, ReviewForm };

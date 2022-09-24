@@ -1,0 +1,78 @@
+@import "styles/_mixins.scss";
+@import "styles/_colors.scss";
+
+.review_form {
+  padding-top: 30px;
+  //@include fonts(700, 14px, 24px, $accent);
+  display: grid;
+  grid-template-columns: [start] auto 1fr auto [end];
+  gap: 20px 30px;
+  align-items: center;
+
+  & input{
+    width: 218px;
+  }
+
+  & .rate{
+    @include display-flex;
+    gap: 20px;
+  }
+
+  & .textarea{
+    grid-column: start / end;
+  }
+
+
+  & .button_block{
+    grid-column: start / end;
+
+    @include display-flex(flex-start);
+    gap: 15px;
+  }
+
+  @media screen and (max-width: 1200px) {
+    grid-template-columns: [start] 1fr 2fr  [end];
+    justify-items: flex-start;
+
+    & input, textarea{
+      width: 100%;
+    }
+
+    & .rate{
+      grid-column: start / end;
+    }
+  }
+
+  @media screen and (max-width: 440px) {
+    grid-template-columns: [start] 1fr [end];
+
+    & .button_block{
+      flex-direction: column;
+
+      & button{
+        width: 100%;
+      }
+    }
+
+  }
+}
+
+.success{
+  margin-top: 15px;
+  position: relative;
+  padding: 20px;
+  background: $green-light;
+  border-radius: 5px;
+  @include fonts(400, 14px, 24px, $green);
+
+  & h3{
+    font-size: 14px;
+  }
+
+  & svg{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+  }
+}

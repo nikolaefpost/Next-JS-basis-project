@@ -1,4 +1,4 @@
-import React, {FC, useState} from 'react';
+import React, {FC} from 'react';
 import {ButtonProps} from './Button.props';
 import cn from "classnames";
 import ArrowIcon from "./arrow.svg";
@@ -15,16 +15,8 @@ const Button: FC<ButtonProps> = (
         ...props
     }
 ) => {
-
-    const [isOpen, setIsOpen] =useState<string >(direction);
-    const onHandleClick = (): void =>{
-        setIsOpen(prev => {
-            return prev === "right" ? "down" : "right"
-        })
-    }
     return (
         <button
-            onClick={onHandleClick}
             {...props}
             className={cn(styles.button, className, {
                 [styles.primary]: appearance === "primary",
@@ -32,8 +24,8 @@ const Button: FC<ButtonProps> = (
             })}>
             {children}
             {arrow && <span className={cn(styles.arrow,
-                {[styles.right]: isOpen === "right"},
-                {[styles.down]: isOpen === "down"},
+                {[styles.right]: direction === "right"},
+                {[styles.down]: direction === "down"},
 
             )}>
                 <ArrowIcon />

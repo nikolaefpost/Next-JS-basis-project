@@ -4,7 +4,7 @@ import cn from "classnames";
 import Image from 'next/image';
 import styles from "./product.module.scss";
 import Card from '../Card/Card';
-import {Button, Rating, Review, Tag} from "../index";
+import {Button, Rating, Review, ReviewForm, Tag} from "../index";
 import {declOdNumber, priceRu} from "../../helpers";
 
 const Product: FC<ProductProps> = ({product, className, ...props}) => {
@@ -73,6 +73,7 @@ const Product: FC<ProductProps> = ({product, className, ...props}) => {
                 {product.reviews.map(item=>(
                     <Review key={item._id} review={item}/>
                 ))}
+                <ReviewForm productId={product._id}/>
             </Card>
         </>
     );

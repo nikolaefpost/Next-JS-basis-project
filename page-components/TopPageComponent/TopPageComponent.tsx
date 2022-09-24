@@ -2,7 +2,7 @@ import React, {FC, useReducer} from 'react';
 import {TopPageComponentProps} from './TopPageComponent.props';
 import {Advantages, HTag, Product, Skills, Sort, Tag} from "../../components";
 
-import styles from "./TopPageComponent.module.scss"
+import styles from "./TopPageComponent.module.scss";
 import HHData from "../../components/HHData/HHData";
 import {TopLevelCategory} from "../../interface";
 import {sortReducer} from "./sort.reduser";
@@ -11,7 +11,6 @@ import { SortEnum } from '../../components/Sort/sort.props';
 
 const TopPageComponent: FC<TopPageComponentProps> = ({page, products, firstCategory}) => {
     const [{products: sortedProducts, sort}, dispatchSort]= useReducer(sortReducer, {sort: SortEnum.Rating, products});
-    // console.log(sortedProducts);
     
     const onHandledSort = (sort: SortEnum) => {
       dispatchSort({type: sort});
