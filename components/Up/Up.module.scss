@@ -1,0 +1,20 @@
+@import "styles/_mixins.scss";
+@import "styles/_colors.scss";
+
+.up{
+  border: none;
+  width: 40px;
+  height: 40px;
+  background: $primary;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  @include display-flex;
+  position: fixed;
+  right: 50px;
+  bottom: 100px;
+  cursor: pointer;
+
+  &:hover{
+    background: $primary-hover;
+  }
+}

@@ -1,6 +1,9 @@
 export interface IReviewForm {
-    userName: string;
+    name: string;
     title: string;
     description: string;
     rating: number;
+}
+export interface IReviewSendResponse {
+    message: string;
 }

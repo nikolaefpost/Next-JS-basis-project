@@ -1,17 +1,38 @@
 @import "styles/_mixins.scss";
 @import "styles/_colors.scss";
 
-.rating{
+.wrapper {
+  position: relative;
 
-  & .star{
-    margin-right: 5px;
+  & .rating {
+
+    & .star {
+      margin-right: 5px;
+    }
+
+    & .isEditable {
+      cursor: pointer;
+    }
+
+    & .filled {
+      fill: $primary;
+    }
   }
 
-  & .isEditable{
-    cursor: pointer;
+  & .red_stars{
+    & span span svg{
+      stroke: $warm_red;
+    }
   }
 
-  & .filled{
-    fill: $primary;
+  & .message{
+    position: absolute;
+    top: -21px;
+    left: 0;
+    @include fonts(400, 12px, 12px, $warm_red);
   }
+}
+
+.error{
+  border: 1px solid $warm_red;
 }

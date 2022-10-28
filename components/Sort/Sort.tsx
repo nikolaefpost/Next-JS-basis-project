@@ -5,7 +5,6 @@ import cn from "classnames";
 import styles from "./sort.module.scss"
 
 const Sort: FC<SortProps> = ({sort, setSort, className, ...props}) => {
-    console.log(sort);
     return (
         <div className={cn(styles.sort, className)} {...props}>
             <span

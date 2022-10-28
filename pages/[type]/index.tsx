@@ -2,13 +2,13 @@ import React, {useContext, useEffect} from "react";
 import {withLayout} from "../../Layout/Layout";
 import {GetStaticPaths, GetStaticProps, GetStaticPropsContext, NextPage} from "next";
 import axios from "axios";
-import {MenuItem, ProductModel, TopLevelCategory, TopPageModel} from "../../interface";
+import {MenuItem,  TopLevelCategory} from "../../interface";
 import {firstLevelMenu} from "../../helpers";
 import {ParsedUrlQuery} from "querystring";
 import {AppContext} from "../../context/app.context";
+import {API} from "../../helpers/api";
 
 const Type: NextPage<TypeProps> = ({firstCategory, menu}) => {
-    console.log(menu);
     const { setMenu} = useContext(AppContext);
     useEffect(()=>{
         setMenu &&  setMenu(menu);
@@ -18,7 +18,7 @@ const Type: NextPage<TypeProps> = ({firstCategory, menu}) => {
             Courses: {firstCategory}
         </>
     );
-}
+};
 
 export default withLayout(Type);
 
@@ -43,7 +43,7 @@ export const getStaticProps: GetStaticProps<TypeProps> =  async ({params}: GetSt
         };
     }
 
-    const { data: menu} = await axios.post<MenuItem[]>(process.env.NEXT_PUBLIC_DOMAIN + "/api/top-page/find",{
+    const { data: menu} = await axios.post<MenuItem[]>(API.topPage.find,{
         firstCategory: firstCategoryItem.id
     });
     return{

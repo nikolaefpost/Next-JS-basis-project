@@ -65,6 +65,11 @@
     align-self: center;
   }
 
+  .rateTitle a{
+    cursor: pointer;
+  }
+
+
   .description {
     grid-column: start / end;
     @include fonts(400, 16px, 24px, $accent);
@@ -110,7 +115,7 @@
     }
 
     & .advantages {
-      border-left: 2px solid $green;
+      border-left: 2px solid $light_green;
     }
 
     .disadvantages {
@@ -271,21 +276,15 @@
         &:last-child{
           margin: 0;
         }
-
       }
     }
-
   }
 }
 
-.review{
-  max-height: 0;
-  padding: 0;
+.wrapper_review{
   overflow: hidden;
 }
 
-.is_open{
+.review{
   padding: 30px;
-  //height: auto;
-  max-height: fit-content;
 }

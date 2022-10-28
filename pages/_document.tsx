@@ -26,6 +26,7 @@ export default class MyDocument extends Document {
                     {/*<meta name="twitter:card" content="summary"/>*/}
                     {/*<meta name="twitter:title" content="The Best 2022 Gaming Summit"/>*/}
                     {/*<meta name="twitter:image" content="https://tallinngamingsummit.com/tgs.png"/>*/}
+                    <title>Next-basic</title>
                 </Head>
                 <body>
                     <Main/>

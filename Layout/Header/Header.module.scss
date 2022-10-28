@@ -1,6 +1,29 @@
 @import "styles/_mixins.scss";
 @import "styles/_colors.scss";
 
-.header{
+.header {
+  grid-template-columns: 1fr auto;
+  padding-top: 14px;
+  gap: 10px;
 
+  & .mobile_menu {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background: #F5F6F8;
+    right: 0;
+    bottom: 0;
+    overflow-y: scroll;
+    //display: none;
+    padding: 20px 10px;
+    overflow-x: hidden;
+
+    & .menu_close {
+      position: fixed;
+      //z-index: 11;
+      top: 15px;
+      right: 14px;
+    }
+  }
 }

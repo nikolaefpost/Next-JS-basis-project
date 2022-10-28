@@ -1,0 +1,44 @@
+@import "styles/_mixins.scss";
+@import "styles/_colors.scss";
+
+.button {
+  border: none;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  @include display-flex;
+  cursor: pointer;
+}
+
+.primary {
+  background: $primary;
+
+  & svg{
+    fill: $white;
+  }
+
+  &:hover{
+    background: $white;
+
+    & svg{
+      fill: $primary;
+    }
+  }
+}
+
+.white{
+  background: $white;
+
+  & svg{
+    fill: $primary;
+  }
+
+  &:hover{
+    background: $primary;
+
+    & svg{
+      fill: $white;
+    }
+  }
+}

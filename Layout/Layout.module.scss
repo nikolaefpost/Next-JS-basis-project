@@ -15,6 +15,21 @@
   ". sidebar body ."
   "footer footer footer footer";
 
+  & .skipLink{
+    display: block;
+    position: fixed;
+    left: 100px;
+    top: 0;
+    height: 0;
+    overflow: hidden;
+    background: $primary;
+    color: $white;
+  }
+
+  & .displayed{
+    height: auto;
+  }
+
   & .header{
     grid-area: header;
     display: none;
@@ -24,6 +39,7 @@
   }
   & .body{
     grid-area: body;
+    outline: none;
 
   }
   & .footer{
@@ -32,15 +48,17 @@
 
   @media screen and (max-width: 765px){
     min-height: auto;
+    width: 100%;
     grid-template-columns: minmax(320px, 1fr) ;
     grid-template-areas:
   "header"
   "body"
   "footer";
-    padding: 0 20px;
+    padding: 0 14px;
+    gap: 10px;
 
     & .header{
-      display: block;
+      display: grid;
     }
     & .sidebar{
       display: none;

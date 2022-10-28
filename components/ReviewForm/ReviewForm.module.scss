@@ -16,6 +16,13 @@
   & .rate{
     @include display-flex;
     gap: 20px;
+    padding: 5px;
+
+  }
+
+  .rate_error{
+    border: 1px solid $warm_red;
+    border-radius: 5px;
   }
 
   & .textarea{
@@ -70,6 +77,28 @@
   }
 
   & svg{
+    stroke: $green;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+  }
+}
+
+.error{
+  margin-top: 15px;
+  position: relative;
+  padding: 20px;
+  background: #ffeeee;
+  border-radius: 5px;
+  @include fonts(400, 14px, 24px, $warm_red);
+
+  & h3{
+    font-size: 14px;
+  }
+
+  & svg{
+    stroke: $warm_red;
     position: absolute;
     top: 20px;
     right: 20px;

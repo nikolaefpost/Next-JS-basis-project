@@ -2,6 +2,7 @@ import React, {FC} from 'react';
 import {ButtonProps} from './Button.props';
 import cn from "classnames";
 import ArrowIcon from "./arrow.svg";
+import {motion} from "framer-motion";
 import styles from "./Button.module.scss";
 
 
@@ -16,7 +17,8 @@ const Button: FC<ButtonProps> = (
     }
 ) => {
     return (
-        <button
+        <motion.button
+            whileHover={{scale: 1.1}}
             {...props}
             className={cn(styles.button, className, {
                 [styles.primary]: appearance === "primary",
@@ -30,7 +32,7 @@ const Button: FC<ButtonProps> = (
             )}>
                 <ArrowIcon />
             </span>}
-        </button>
+        </motion.button>
     );
 };
 

@@ -20,4 +20,16 @@
       color: #A4A4A4;
     }
   }
+
+  & span{
+    position: absolute;
+    top: -16px;
+    left: 0;
+    @include fonts(400, 12px, 12px, $warm_red);
+  }
+}
+
+.error{
+  border: 1px solid $warm_red;
+  border-radius: 5px;
 }

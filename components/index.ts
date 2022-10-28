@@ -14,5 +14,7 @@ import Search from "./Search/Search";
 import Product from "./Product/Product";
 import Review from "./Review/Review";
 import ReviewForm from "./ReviewForm/ReviewForm";
+import Up from "./Up/Up";
+import ButtonIcon from "./ButtonIcon/ButtonIcon";
 
-export { HTag, Button, PTag, Tag, Rating, Card, HhData, Advantages, Skills, Sort, Input, Textarea, Search, Product, Review, ReviewForm };
+export { HTag, Button, PTag, Tag, Rating, Card, HhData, Advantages, Skills, Sort, Input, Textarea, Search, Product, Review, ReviewForm, Up, ButtonIcon };

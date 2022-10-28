@@ -8,7 +8,7 @@ export interface IAppContext {
 }
 
 export const AppContext = createContext<IAppContext>(
-    {menu: [], firstCategory: TopLevelCategory.Services}
+    {menu: [], firstCategory: TopLevelCategory.Courses}
 );
 
 export const AppContextProvider: React.FC<React.PropsWithChildren<IAppContext>> = ({menu, firstCategory, children}) => {

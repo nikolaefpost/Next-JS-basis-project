@@ -8,9 +8,11 @@ const Textarea = React.forwardRef((
     ref: ForwardedRef<HTMLTextAreaElement>
 ): JSX.Element => {
     return (
-        <div className={cn(styles.wrapper, className)}>
+        <div className={cn(styles.wrapper, className, {
+            [styles.error]: error
+        })}>
             <textarea ref={ref} placeholder={placeholder} className={cn( styles.input)} {...props} />
-            {error && error.message}
+            <span>{error && error.message}</span>
         </div>
     );
 });
