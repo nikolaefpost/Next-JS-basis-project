@@ -6,6 +6,11 @@
 
   & .rating {
 
+    & span span{
+      display: inline-block;
+      text-align: center;
+    }
+
     & .star {
       margin-right: 5px;
     }

@@ -1,20 +1,19 @@
 import React, {FC} from 'react';
 import {HhData as HHDataProps } from "../../interface";
-import cn from "classnames";
-import RateIcon from "./rate.svg"
+import RateIcon from "./rate.svg";
 import styles from "./HHData.module.scss";
 import Card from '../Card/Card';
 import {priceRu} from "../../helpers";
 
 
-const HhData: FC<HHDataProps> = ({_id, count, middleSalary, seniorSalary, juniorSalary, updatedAt}) => {
+const HhData: FC<HHDataProps> = ({ count, middleSalary, seniorSalary, juniorSalary}) => {
     return (
         <div className={styles.hh}>
-            <Card color="white" className={styles.count}>
+            <Card cardColor="white" className={styles.count}>
                 <h3 className={styles.title}>Всего вакансий</h3>
                 <p className={styles.countValue}>{count}</p>
             </Card>
-            <Card color="white" className={styles.salary}>
+            <Card cardColor="white" className={styles.salary}>
                 <div className={styles.wrapper}>
                     <h3 className={styles.title}>Начальный</h3>
                     <p className={styles.salaryValue}>{priceRu(juniorSalary)}</p>

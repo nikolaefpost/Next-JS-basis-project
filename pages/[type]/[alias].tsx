@@ -7,16 +7,24 @@ import {MenuItem, ProductModel, TopLevelCategory, TopPageModel} from "../../inte
 import {firstLevelMenu} from "../../helpers";
 import TopPageComponent from "../../page-components/TopPageComponent/TopPageComponent";
 import {API} from "../../helpers/api";
+import Head from "next/head";
 
 
-const TopPage: NextPage<TopPageProps> = ({menu, page, products, firstCategory}) => {
-    // console.log(products);
+const TopPage: NextPage<TopPageProps> = ({ page, products, firstCategory}) => {
     return (
         <>
+            <Head>
+                <title>{page.metaTitle}</title>
+                <meta name="description"  content={page.metaDescription}/>
+
+                <meta property="og:title"  content={page.metaTitle}/>
+                <meta property="og:description"  content={page.metaDescription}/>
+                <meta property="og:type" content="website" />
+            </Head>
             <TopPageComponent page={page} products={products} firstCategory={firstCategory}/>
         </>
     );
-}
+};
 
 export default withLayout(TopPage);
 

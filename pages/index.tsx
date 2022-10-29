@@ -1,26 +1,24 @@
 import React, {useState} from "react";
-import Head from 'next/head';
-import {Button, HTag, PTag, Tag, Rating, Input, Textarea} from "../components";
+// import Head from 'next/head';
+import {Button, HTag, PTag, Tag, Rating,  Textarea} from "../components";
 import {withLayout} from "../Layout/Layout";
 import {GetStaticProps, NextPage} from "next";
 import axios from "axios";
 import styles from '../styles/Home.module.scss';
-import { MenuItem, TopPageModel } from "../interface";
+import { MenuItem} from "../interface";
 import {API} from "../helpers/api";
 
 const Home: NextPage = () => {
     // console.log(menu);
-    const [rating, setRating] = useState<number>(3)
+    const [rating, setRating] = useState<number>(3);
     return (
         <>
-            <Head>
-                <title>Basis</title>
-                <meta name="description" content="The application shows the possibilities Next JS"/>
-                <link rel="icon" href="/favicon.ico"/>
-                {/*<style>*/}
-                {/*    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap');*/}
-                {/*</style>*/}
-            </Head>
+            {/*<Head>*/}
+            {/*    <title>Next-basic</title>*/}
+            {/*    <style>*/}
+            {/*        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap');*/}
+            {/*    </style>*/}
+            {/*</Head>*/}
 
             <div className={styles.home}>
                 <HTag tag="h1">TEXT</HTag>
@@ -44,7 +42,7 @@ const Home: NextPage = () => {
             </div>
         </>
     );
-}
+};
 
 export default withLayout(Home);
 

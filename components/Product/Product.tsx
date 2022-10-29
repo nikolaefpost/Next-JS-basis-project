@@ -30,9 +30,13 @@ const Product = motion(forwardRef(({product, className, ...props}: ProductProps,
     };
     
     const scrollToReview = () => {
-        setIsReviewOpened(true);
+
         reviewRef.current?.scrollIntoView({block: "end"});
         reviewRef.current?.focus();
+        setTimeout(()=>{
+            setIsReviewOpened(prev => !prev);
+        },500);
+
 
     };
     return (
@@ -46,7 +50,7 @@ const Product = motion(forwardRef(({product, className, ...props}: ProductProps,
                         alt={product.title}
                     />}
                 </div>
-                <div className={styles.title}>{product.title}</div>
+                <h2 className={styles.title}>{product.title}</h2>
                 <div className={styles.price}>
                     {priceRu(product.price)}
                     {product.oldPrice && <Tag color="green">{priceRu(product.price - product.oldPrice)}</Tag>}
@@ -102,12 +106,12 @@ const Product = motion(forwardRef(({product, className, ...props}: ProductProps,
                     cardColor="blue"
                     className={cn(className, styles.review)}
                     ref={reviewRef}
-                    tabIndex={0}
+                    tabIndex={isReviewOpened? 0: -1}
                 >
                     {product.reviews.map(item=>(
                         <Review key={item._id} review={item}/>
                     ))}
-                    <ReviewForm productId={product._id}/>
+                    <ReviewForm isOpened={isReviewOpened} productId={product._id}/>
                 </Card>
             </motion.div>
 

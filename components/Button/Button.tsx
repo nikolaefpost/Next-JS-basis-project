@@ -13,11 +13,13 @@ const Button: FC<ButtonProps> = (
         className,
         arrow,
         direction = "right",
+        tabIndex,
         ...props
     }
 ) => {
     return (
         <motion.button
+            tabIndex={tabIndex}
             whileHover={{scale: 1.1}}
             {...props}
             className={cn(styles.button, className, {

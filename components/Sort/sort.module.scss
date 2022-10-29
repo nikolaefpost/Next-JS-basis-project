@@ -7,9 +7,11 @@
   align-items: center;
   justify-items: end;
 
-  & span{
+  & button{
     @include fonts(400, 16px, 22px, #000000);
     cursor: pointer;
+    border: none;
+    background: inherit;
 
     & svg{
       visibility: hidden;
@@ -24,7 +26,4 @@
   & .active{
     color: $primary;
   }
-
-
-
 }

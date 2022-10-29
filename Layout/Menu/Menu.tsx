@@ -5,7 +5,7 @@ import cn from "classnames";
 import Link from 'next/link';
 import {useRouter} from "next/router";
 import { firstLevelMenu } from '../../helpers';
-import {motion} from "framer-motion";
+import {motion, useReducedMotion} from "framer-motion";
 
 import styles from "./menu.module.scss";
 
@@ -13,12 +13,13 @@ const Menu: FC = () => {
 
     const {menu, setMenu, firstCategory} = useContext(AppContext);
     const router = useRouter();
+    const shouldReduceMotion = useReducedMotion();
 
     const variants = {
         visible:{
             marginBottom: "20px",
             // display: "block",
-            transition: {
+            transition: shouldReduceMotion? {}: {
                 when: "beforeChildren",
                 staggerChildren: .1
             }
@@ -35,7 +36,7 @@ const Menu: FC = () => {
             height: "auto",
         },
         hidden: {
-            opacity: 0,
+            opacity: shouldReduceMotion? 1: 0,
             height: 0,
         }
     };
@@ -57,7 +58,7 @@ const Menu: FC = () => {
         if (key.code === "Enter" || key.code ==="Space") {
             key.preventDefault();
             openSecondLevel(secondCategory);
-        };
+        }
     };
 
     const buildFirstLevel = () => {

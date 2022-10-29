@@ -7,12 +7,13 @@ import HHData from "../../components/HHData/HHData";
 import {TopLevelCategory} from "../../interface";
 import {sortReducer} from "./sort.reduser";
 import { SortEnum } from '../../components/Sort/sort.props';
+import {useReducedMotion} from "framer-motion";
 // import {useScrollY} from "../../hooks/useScrollY";
 
 
 const TopPageComponent: FC<TopPageComponentProps> = ({page, products, firstCategory}) => {
     const [{products: sortedProducts, sort}, dispatchSort]= useReducer(sortReducer, {sort: SortEnum.Rating, products});
-
+    const shouldReduceMotion = useReducedMotion();
 
     const onHandledSort = (sort: SortEnum) => {
       dispatchSort({type: sort});
@@ -33,7 +34,7 @@ const TopPageComponent: FC<TopPageComponentProps> = ({page, products, firstCateg
             </div>
             <div className={styles.product}>
                 {sortedProducts && sortedProducts.map(item=>(
-                    <Product layout transition={{ duration: .5 }} product={item} key={item._id}/>
+                    <Product layout={!shouldReduceMotion} transition={{ duration: .5 }} product={item} key={item._id}/>
                 ))}
             </div>
             <div className={styles.hh_title}>

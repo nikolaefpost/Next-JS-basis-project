@@ -10,7 +10,7 @@ import styles from "./ReviewForm.module.scss";
 import {API} from "../../helpers/api";
 
 
-const ReviewForm: FC<ReviewFormProps> = ({productId, className, ...props}) => {
+const ReviewForm: FC<ReviewFormProps> = ({productId, isOpened, className, ...props}) => {
     const {
         register,
         control,
@@ -40,7 +40,7 @@ const ReviewForm: FC<ReviewFormProps> = ({productId, className, ...props}) => {
             //     // do whatever you want with native error
             // }
             // // do what you want with your axios error
-            setError(error.message)
+            setError(error.message);
         }
 
     };
@@ -54,11 +54,13 @@ const ReviewForm: FC<ReviewFormProps> = ({productId, className, ...props}) => {
                     placeholder="Имя"
                     error={errors.name}
                     {...register("name", {required: {value: true, message: "имя не заполнено"}})}
+                    tabIndex={isOpened? 0 : -1}
                 />
                 <Input
                     placeholder="Заголовок отзыва"
                     error={errors.title}
                     {...register("title", {required: {value: true, message: "введите заголовок"}})}
+                    tabIndex={isOpened? 0 : -1}
                 />
                 <div className={cn(styles.rate, {[styles.rate_error]:errors.rating})}>
                     <span>Оценка:</span>
@@ -66,7 +68,15 @@ const ReviewForm: FC<ReviewFormProps> = ({productId, className, ...props}) => {
                         name="rating"
                         control={control}
                         rules={{ required: "введите рейтинг" }}
-                        render={({field})=><Rating ref={field.ref} error={errors.rating}  rating={field.value} setRating={field.onChange} isEditable/>}
+                        render={({field})=>
+                            <Rating
+                                ref={field.ref}
+                                error={errors.rating}
+                                rating={field.value}
+                                setRating={field.onChange}
+                                isEditable
+                                tabIndex={isOpened? 0 : -1}
+                            />}
                     />
 
                 </div>
@@ -75,9 +85,10 @@ const ReviewForm: FC<ReviewFormProps> = ({productId, className, ...props}) => {
                     placeholder="Текст отзыва"
                     error={errors.description}
                     {...register("description", {required: {value: true, message: "введите описание"}})}
+                    tabIndex={isOpened? 0 : -1}
                 />
                 <div className={styles.button_block}>
-                    <Button appearance="primary" type="submit">Отправить</Button>
+                    <Button appearance="primary" type="submit" tabIndex={isOpened? 0 : -1}>Отправить</Button>
                     <span>* Перед публикацией отзыв пройдет предварительную модерацию и проверку</span>
                 </div>
 
