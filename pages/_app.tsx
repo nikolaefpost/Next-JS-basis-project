@@ -16,7 +16,7 @@ function MyApps({ Component, pageProps, router }: AppProps): JSX.Element {
     return () => {
       router.events.off('routeChangeComplete', handleRouteChange)
     }
-  }, [])
+  }, [router.events])
 
   return (
     <>

@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 import Card from '../Card/Card'
 import { Button, Rating, Review, ReviewForm, Tag } from '../index'
 import { declOdNumber, priceRu } from '../../helpers'
-import styles from './product.module.scss'
+import styles from "./product.module.scss"
 
 const Product = motion(
   forwardRef(
