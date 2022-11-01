@@ -1,11 +1,10 @@
-@import "styles/_mixins.scss";
-@import "styles/_colors.scss";
+@import 'styles/_mixins.scss';
+@import 'styles/_colors.scss';
 
-.wrapper{
-
+.wrapper {
   position: relative;
 
-  & .input{
+  & .input {
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
     border-radius: 5px;
     @include fonts(400, 16px, 22px, $accent);
@@ -17,15 +16,15 @@
     width: 100%;
 
     &::placeholder {
-      color: #A4A4A4;
+      color: #a4a4a4;
     }
   }
 
-  & .error{
+  & .error {
     border: 1px solid $warm_red;
   }
 
-  & span{
+  & span {
     position: absolute;
     top: -16px;
     left: 0;

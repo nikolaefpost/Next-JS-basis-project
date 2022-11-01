@@ -1,48 +1,48 @@
-@import "styles/_mixins.scss";
-@import "styles/_colors.scss";
+@import 'styles/_mixins.scss';
+@import 'styles/_colors.scss';
 
-.tag{
+.tag {
   display: inline-block;
   margin-right: 5px;
   border-radius: 20px;
 }
 
-.s{
+.s {
   padding: 5px 10px;
   font-size: 12px;
   line-height: 12px;
 }
 
-.l{
+.l {
   padding: 5px 10px;
   font-size: 14px;
   line-height: 14px;
 }
 
-.ghost{
+.ghost {
   color: $accent;
   border: 1px solid $grey-light;
 }
 
-.red{
-  background: #DE0000;
+.red {
+  background: #de0000;
   color: $white;
   font-weight: bold;
 }
 
-.grey{
+.grey {
   background: #64728e;
   color: $white;
   font-weight: bold;
 }
 
-.green{
+.green {
   background: $green-light;
   color: $green;
   font-weight: bold;
 }
 
-.primary{
+.primary {
   color: $primary;
   border: 1px solid $primary;
 }

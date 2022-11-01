@@ -1,12 +1,11 @@
-@import "styles/_mixins.scss";
-@import "styles/_colors.scss";
+@import 'styles/_mixins.scss';
+@import 'styles/_colors.scss';
 
 .wrapper {
   position: relative;
 
   & .rating {
-
-    & span span{
+    & span span {
       display: inline-block;
       text-align: center;
     }
@@ -24,13 +23,13 @@
     }
   }
 
-  & .red_stars{
-    & span span svg{
+  & .red_stars {
+    & span span svg {
       stroke: $warm_red;
     }
   }
 
-  & .message{
+  & .message {
     position: absolute;
     top: -21px;
     left: 0;
@@ -38,6 +37,6 @@
   }
 }
 
-.error{
+.error {
   border: 1px solid $warm_red;
 }

@@ -1,5 +1,5 @@
-@import "styles/_mixins.scss";
-@import "styles/_colors.scss";
+@import 'styles/_mixins.scss';
+@import 'styles/_colors.scss';
 
 .review {
   margin-top: 20px;
@@ -9,8 +9,8 @@
   padding-bottom: 20px;
   border-bottom: 1px solid $grey-light;
   grid-template-areas:
-          "title date rate"
-          " description description description";
+    'title date rate'
+    ' description description description';
   align-items: center;
 
   &:first-child {
@@ -22,11 +22,11 @@
     @include display-flex(flex-start);
     gap: 10px;
 
-    & div{
+    & div {
       @include display-flex;
       gap: 10px;
 
-      & span{
+      & span {
         @include fonts(700, 14px, 24px, $accent);
       }
     }
@@ -52,11 +52,11 @@
   }
 
   @media screen and (max-width: 765px) {
-    grid-template-columns: 1fr  auto;
+    grid-template-columns: 1fr auto;
     grid-template-areas:
-          "title title"
-          "description description"
-          "date rate";
+      'title title'
+      'description description'
+      'date rate';
 
     & .description {
       margin-bottom: 10px;

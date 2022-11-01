@@ -1,5 +1,5 @@
-@import "styles/_mixins.scss";
-@import "styles/_colors.scss";
+@import 'styles/_mixins.scss';
+@import 'styles/_colors.scss';
 
 .button {
   display: inline-block;
@@ -8,23 +8,20 @@
   text-align: center;
   border: none;
   border-radius: 5px;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 
-  & .arrow{
+  & .arrow {
     margin-left: 10px;
   }
 
-  & .down{
-
-    & svg{
+  & .down {
+    & svg {
       transform: rotate(90deg);
-      transition: all .2s ease-in-out;
+      transition: all 0.2s ease-in-out;
     }
-
   }
 
-  & .right{
-
+  & .right {
   }
 }
 
@@ -33,16 +30,16 @@
   border: 1px solid $white;
   @include fonts(400, 14px, 19px, $white);
 
-  & span svg{
+  & span svg {
     fill: $white;
   }
 
-  &:hover{
+  &:hover {
     background: $white;
     border: 1px solid $grey-light;
     @include fonts(400, 14px, 19px, $accent);
 
-    & span svg{
+    & span svg {
       fill: $accent;
     }
   }
@@ -53,16 +50,16 @@
   border: 1px solid $grey-light;
   @include fonts(400, 14px, 19px, $accent);
 
-  & span svg{
+  & span svg {
     fill: $accent;
   }
 
-  &:hover{
+  &:hover {
     background: $primary;
     border: 1px solid $white;
     @include fonts(400, 14px, 19px, $white);
 
-    & span svg{
+    & span svg {
       fill: $white;
     }
   }

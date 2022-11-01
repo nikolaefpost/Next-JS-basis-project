@@ -1,25 +1,27 @@
-import React, {createContext, useState} from "react";
-import {MenuItem, TopLevelCategory} from "../interface";
+import React, { createContext, useState } from 'react'
+import { MenuItem, TopLevelCategory } from '../interface'
 
 export interface IAppContext {
-    menu: MenuItem[];
-    firstCategory: TopLevelCategory;
-    setMenu?: (newMenu: MenuItem[]) => void;
+  menu: MenuItem[]
+  firstCategory: TopLevelCategory
+  setMenu?: (newMenu: MenuItem[]) => void
 }
 
-export const AppContext = createContext<IAppContext>(
-    {menu: [], firstCategory: TopLevelCategory.Courses}
-);
+export const AppContext = createContext<IAppContext>({
+  menu: [],
+  firstCategory: TopLevelCategory.Courses,
+})
 
-export const AppContextProvider: React.FC<React.PropsWithChildren<IAppContext>> = ({menu, firstCategory, children}) => {
-
-    const [menuState, setMenuState] = useState<MenuItem[]>(menu);
-    const setMenu = (newMenu: MenuItem[]): void =>{
-        setMenuState(newMenu);
-    };
+export const AppContextProvider: React.FC<
+  React.PropsWithChildren<IAppContext>
+> = ({ menu, firstCategory, children }) => {
+  const [menuState, setMenuState] = useState<MenuItem[]>(menu)
+  const setMenu = (newMenu: MenuItem[]): void => {
+    setMenuState(newMenu)
+  }
   return (
-      <AppContext.Provider value={{menu: menuState, firstCategory, setMenu}}>
-          {children}
-      </AppContext.Provider>
-  );
+    <AppContext.Provider value={{ menu: menuState, firstCategory, setMenu }}>
+      {children}
+    </AppContext.Provider>
+  )
 }

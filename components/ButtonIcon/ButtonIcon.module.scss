@@ -1,5 +1,5 @@
-@import "styles/_mixins.scss";
-@import "styles/_colors.scss";
+@import 'styles/_mixins.scss';
+@import 'styles/_colors.scss';
 
 .button {
   border: none;
@@ -14,30 +14,30 @@
 .primary {
   background: $primary;
 
-  & svg{
+  & svg {
     fill: $white;
   }
 
-  &:hover{
+  &:hover {
     background: $white;
 
-    & svg{
+    & svg {
       fill: $primary;
     }
   }
 }
 
-.white{
+.white {
   background: $white;
 
-  & svg{
+  & svg {
     fill: $primary;
   }
 
-  &:hover{
+  &:hover {
     background: $primary;
 
-    & svg{
+    & svg {
       fill: $white;
     }
   }

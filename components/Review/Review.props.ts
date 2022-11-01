@@ -1,7 +1,7 @@
-import {DetailedHTMLProps, HTMLAttributes} from "react";
-import {ReviewModel} from "../../interface";
+import { DetailedHTMLProps, HTMLAttributes } from 'react'
+import { ReviewModel } from '../../interface'
 
-
-export interface ReviewProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>{
-    review: ReviewModel;
+export interface ReviewProps
+  extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
+  review: ReviewModel
 }

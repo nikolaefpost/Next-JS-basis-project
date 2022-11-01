@@ -3,22 +3,19 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   env: {
-    SERVER_API: "https://webapplication120220426093502.azurewebsites.net",
+    SERVER_API: 'https://webapplication120220426093502.azurewebsites.net',
   },
   images: {
-    domains: ['courses-top.ru']
+    domains: ['courses-top.ru'],
   },
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
-      use: ["@svgr/webpack"]
-    });
+      use: ['@svgr/webpack'],
+    })
 
-    return config;
-  }
+    return config
+  },
+}
 
-};
-
-
-
-module.exports = nextConfig;
+module.exports = nextConfig

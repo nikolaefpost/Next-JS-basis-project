@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "stylelint" : "stylelint \"**/*.scss\" --fix"
+    "husky": "npx tsc --noEmit && npx eslint . && npx prettier --write ."
   },
   "dependencies": {
     "axios": "^0.27.2",
@@ -32,9 +32,10 @@
     "@typescript-eslint/parser": "^5.35.1",
     "eslint": "^8.22.0",
     "eslint-config-next": "12.2.5",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "husky": "^8.0.1",
-    "stylelint": "^14.14.0",
+    "prettier": "^2.7.1",
     "typescript": "4.7.4"
   }
 }

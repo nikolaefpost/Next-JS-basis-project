@@ -1,5 +1,5 @@
-@import "styles/_mixins.scss";
-@import "styles/_colors.scss";
+@import 'styles/_mixins.scss';
+@import 'styles/_colors.scss';
 
 .header {
   grid-template-columns: 1fr auto;
@@ -11,7 +11,7 @@
     z-index: 10;
     top: 0;
     left: 0;
-    background: #F5F6F8;
+    background: #f5f6f8;
     right: 0;
     bottom: 0;
     overflow-y: scroll;

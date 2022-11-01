@@ -1,5 +1,5 @@
-@import "styles/_mixins.scss";
-@import "styles/_colors.scss";
+@import 'styles/_mixins.scss';
+@import 'styles/_colors.scss';
 
 .review_form {
   padding-top: 30px;
@@ -9,28 +9,26 @@
   gap: 20px 30px;
   align-items: center;
 
-  & input{
+  & input {
     width: 218px;
   }
 
-  & .rate{
+  & .rate {
     @include display-flex;
     gap: 20px;
     padding: 5px;
-
   }
 
-  .rate_error{
+  .rate_error {
     border: 1px solid $warm_red;
     border-radius: 5px;
   }
 
-  & .textarea{
+  & .textarea {
     grid-column: start / end;
   }
 
-
-  & .button_block{
+  & .button_block {
     grid-column: start / end;
 
     @include display-flex(flex-start);
@@ -38,14 +36,15 @@
   }
 
   @media screen and (max-width: 1200px) {
-    grid-template-columns: [start] 1fr 2fr  [end];
+    grid-template-columns: [start] 1fr 2fr [end];
     justify-items: flex-start;
 
-    & input, textarea{
+    & input,
+    textarea {
       width: 100%;
     }
 
-    & .rate{
+    & .rate {
       grid-column: start / end;
     }
   }
@@ -53,18 +52,17 @@
   @media screen and (max-width: 440px) {
     grid-template-columns: [start] 1fr [end];
 
-    & .button_block{
+    & .button_block {
       flex-direction: column;
 
-      & button{
+      & button {
         width: 100%;
       }
     }
-
   }
 }
 
-.success{
+.success {
   margin-top: 15px;
   position: relative;
   padding: 20px;
@@ -72,11 +70,11 @@
   border-radius: 5px;
   @include fonts(400, 14px, 24px, $green);
 
-  & h3{
+  & h3 {
     font-size: 14px;
   }
 
-  & svg{
+  & svg {
     stroke: $green;
     position: absolute;
     top: 20px;
@@ -85,7 +83,7 @@
   }
 }
 
-.error{
+.error {
   margin-top: 15px;
   position: relative;
   padding: 20px;
@@ -93,11 +91,11 @@
   border-radius: 5px;
   @include fonts(400, 14px, 24px, $warm_red);
 
-  & h3{
+  & h3 {
     font-size: 14px;
   }
 
-  & svg{
+  & svg {
     stroke: $warm_red;
     position: absolute;
     top: 20px;

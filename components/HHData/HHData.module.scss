@@ -1,85 +1,83 @@
-@import "styles/_mixins.scss";
-@import "styles/_colors.scss";
+@import 'styles/_mixins.scss';
+@import 'styles/_colors.scss';
 
-.hh{
+.hh {
   margin-top: 24px;
   display: grid;
   grid-template-columns: 1fr 3fr;
   gap: 30px;
 
-  & .count{
+  & .count {
     padding: 20px;
     text-align: center;
 
-    & h3{
+    & h3 {
       @include fonts(300, 20px, 27px, $accent);
     }
 
-    & p{
+    & p {
       margin-top: 12px;
       @include fonts(700, 36px, 49px, $primary);
     }
   }
 
-  & .salary{
+  & .salary {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     text-align: center;
     padding: 20px;
 
-    & > div{
+    & > div {
       border-right: 1px solid $border;
     }
 
-    & > div:last-child{
+    & > div:last-child {
       border: none;
     }
 
-    & h3{
+    & h3 {
       @include fonts(300, 20px, 27px, $accent);
     }
 
-    & p{
+    & p {
       margin-top: 8px;
       @include fonts(700, 26px, 35px, $accent);
     }
 
-    & .rate{
+    & .rate {
       margin-top: 12px;
 
-      & svg{
+      & svg {
         margin-right: 10px;
 
-        &:last-child{
+        &:last-child {
           margin-right: 0;
         }
       }
-
     }
   }
 
-  @media screen and (max-width: 1200px){
+  @media screen and (max-width: 1200px) {
     grid-template-columns: 1fr;
     gap: 30px;
   }
 
-  @media screen and (max-width: 640px){
+  @media screen and (max-width: 640px) {
     //gap: 0;
 
     & .salary {
       padding: 0 20px;
       grid-template-columns: 1fr;
 
-      & > div{
+      & > div {
         border-right: none;
         border-bottom: 1px solid $border;
         padding: 10px 0;
       }
 
-      & > div:last-child{
+      & > div:last-child {
         border: none;
       }
     }
   }
-
 }

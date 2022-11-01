@@ -1,9 +1,11 @@
-@import "styles/_mixins.scss";
-@import "styles/_colors.scss";
+@import 'styles/_mixins.scss';
+@import 'styles/_colors.scss';
 
 .product {
   display: grid;
-  grid-template-columns: [start] 70px [logoend] 30px [titlestart] calc(50% - 100px)  [midle] 1fr [pricestart] auto [priceend] 40px [creditstart] auto [creditend] 40px [ratestart] auto  [end];
+  grid-template-columns:
+    [start] 70px [logoend] 30px [titlestart] calc(50% - 100px)
+    [midle] 1fr [pricestart] auto [priceend] 40px [creditstart] auto [creditend] 40px [ratestart] auto [end];
   margin-top: 30px;
   padding: 30px;
 
@@ -16,7 +18,8 @@
     }
   }
 
-  .title, .tags {
+  .title,
+  .tags {
     grid-column: titlestart / midle;
   }
 
@@ -29,11 +32,13 @@
     margin-top: 9px;
   }
 
-  .price, .priceTitle {
+  .price,
+  .priceTitle {
     grid-column: pricestart / priceend;
   }
 
-  .price, .credit {
+  .price,
+  .credit {
     @include fonts(400, 20px, 27px, $accent);
     align-self: end;
     @include display-flex;
@@ -43,16 +48,17 @@
     }
   }
 
-  .credit, .creditTitle {
+  .credit,
+  .creditTitle {
     grid-column: creditstart / creditend;
-
 
     & span {
       @include fonts(400, 14px, 19px, $accent);
     }
   }
 
-  .rate, .rateTitle {
+  .rate,
+  .rateTitle {
     grid-column: ratestart / end;
   }
 
@@ -60,15 +66,16 @@
     align-self: end;
   }
 
-  .priceTitle, .creditTitle, .rateTitle {
+  .priceTitle,
+  .creditTitle,
+  .rateTitle {
     @include fonts(300, 14px, 19px, $accent);
     align-self: center;
   }
 
-  .rateTitle a{
+  .rateTitle a {
     cursor: pointer;
   }
-
 
   .description {
     grid-column: start / end;
@@ -95,7 +102,7 @@
       }
 
       & .line {
-        border-bottom: 1px dashed #C4C4C4;
+        border-bottom: 1px dashed #c4c4c4;
         margin-top: 5px;
       }
     }
@@ -105,7 +112,8 @@
     grid-column: midle / end;
     @include fonts(400, 16px, 22px, $accent);
 
-    & .advantages, .disadvantages {
+    & .advantages,
+    .disadvantages {
       padding-left: 15px;
 
       & div:first-child {
@@ -120,11 +128,9 @@
 
     .disadvantages {
       margin-top: 25px;
-      border-left: 2px solid #FC836D;
-
+      border-left: 2px solid #fc836d;
     }
   }
-
 
   hr {
     grid-column: start / end;
@@ -143,105 +149,106 @@
     }
   }
 
-
   @media screen and(max-width: 1400px) {
-    grid-template-columns:  70px  30px  auto 40px  auto  40px  1fr;
+    grid-template-columns: 70px 30px auto 40px auto 40px 1fr;
     grid-template-areas:
-            "logo . title title title title title "
-            "logo . tags tags tags tags tags"
-            "price price price . credit . rate"
-            "priceTitle priceTitle priceTitle . creditTitle . rateTitle"
-            "hr hr hr hr hr hr hr"
-            "description description description description description description description"
-            "feature feature feature feature feature feature feature"
-            "adv_block adv_block adv_block adv_block adv_block adv_block adv_block"
-            "hr2 hr2 hr2 hr2 hr2 hr2 hr2"
-            "actions actions actions actions actions actions actions";
+      'logo . title title title title title '
+      'logo . tags tags tags tags tags'
+      'price price price . credit . rate'
+      'priceTitle priceTitle priceTitle . creditTitle . rateTitle'
+      'hr hr hr hr hr hr hr'
+      'description description description description description description description'
+      'feature feature feature feature feature feature feature'
+      'adv_block adv_block adv_block adv_block adv_block adv_block adv_block'
+      'hr2 hr2 hr2 hr2 hr2 hr2 hr2'
+      'actions actions actions actions actions actions actions';
 
     .logo {
       grid-area: logo;
       margin-bottom: 20px;
     }
 
-    .title{
+    .title {
       grid-area: title;
     }
 
-    .tags{
+    .tags {
       grid-area: tags;
     }
 
-    .price{
+    .price {
       grid-area: price;
     }
 
-    .credit{
+    .credit {
       grid-area: credit;
     }
 
-    .rate{
+    .rate {
       grid-area: rate;
     }
 
-    .priceTitle{
+    .priceTitle {
       grid-area: priceTitle;
     }
 
-    .creditTitle{
+    .creditTitle {
       grid-area: creditTitle;
     }
 
-    .rateTitle{
+    .rateTitle {
       grid-area: rateTitle;
     }
 
-    .hr{
+    .hr {
       grid-area: hr;
     }
 
-    .description{
+    .description {
       grid-area: description;
     }
 
-    .feature{
+    .feature {
       grid-area: feature;
       margin-bottom: 20px;
     }
 
-    .adv_block{
+    .adv_block {
       grid-area: adv_block;
     }
 
-    .hr2{
+    .hr2 {
       grid-area: hr2;
     }
 
-    .actions{
+    .actions {
       grid-area: actions;
     }
   }
 
   @media screen and(max-width: 640px) {
-    grid-template-columns:  70px  30px 1fr;
+    grid-template-columns: 70px 30px 1fr;
     grid-template-areas:
-            "logo . title  "
-            "logo . tags "
-            "priceTitle priceTitle price"
-            "creditTitle creditTitle credit"
-            "rateTitle rateTitle rate"
-            "hr hr hr"
-            "description description description"
-            "feature feature feature "
-            "adv_block adv_block adv_block"
-            "hr2 hr2 hr2"
-            "actions actions actions";
+      'logo . title  '
+      'logo . tags '
+      'priceTitle priceTitle price'
+      'creditTitle creditTitle credit'
+      'rateTitle rateTitle rate'
+      'hr hr hr'
+      'description description description'
+      'feature feature feature '
+      'adv_block adv_block adv_block'
+      'hr2 hr2 hr2'
+      'actions actions actions';
 
-    .price,  .credit, .rate{
+    .price,
+    .credit,
+    .rate {
       justify-self: start;
       margin-bottom: 10px;
     }
 
-    .tags{
+    .tags {
       margin-bottom: 20px;
     }
   }
@@ -249,31 +256,31 @@
   @media screen and(max-width: 480px) {
     grid-template-columns: 1fr;
     grid-template-areas:
-            "logo"
-            "title"
-            "tags"
-            "priceTitle"
-            "price"
-            "creditTitle"
-            "credit"
-            "rateTitle"
-            "rate"
-            "hr"
-            "description"
-            "feature"
-            "adv_block"
-            "hr2"
-            "actions";
+      'logo'
+      'title'
+      'tags'
+      'priceTitle'
+      'price'
+      'creditTitle'
+      'credit'
+      'rateTitle'
+      'rate'
+      'hr'
+      'description'
+      'feature'
+      'adv_block'
+      'hr2'
+      'actions';
 
     .actions {
       @include display-flex();
       flex-direction: column;
       gap: 15px;
 
-      & button{
+      & button {
         width: 100%;
 
-        &:last-child{
+        &:last-child {
           margin: 0;
         }
       }
@@ -281,10 +288,10 @@
   }
 }
 
-.wrapper_review{
+.wrapper_review {
   overflow: hidden;
 }
 
-.review{
+.review {
   padding: 30px;
 }

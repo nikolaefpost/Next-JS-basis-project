@@ -1,7 +1,7 @@
-@import "styles/_mixins.scss";
-@import "styles/_colors.scss";
+@import 'styles/_mixins.scss';
+@import 'styles/_colors.scss';
 
-.wrapper{
+.wrapper {
   width: 100%;
   position: relative;
 
@@ -17,11 +17,11 @@
     width: 100%;
 
     &::placeholder {
-      color: #A4A4A4;
+      color: #a4a4a4;
     }
   }
 
-  & span{
+  & span {
     position: absolute;
     top: -16px;
     left: 0;
@@ -29,7 +29,7 @@
   }
 }
 
-.error{
+.error {
   border: 1px solid $warm_red;
   border-radius: 5px;
 }

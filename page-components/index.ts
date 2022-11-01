@@ -1,3 +1,3 @@
-import TopPageComponent from "./TopPageComponent/TopPageComponent";
+import TopPageComponent from './TopPageComponent/TopPageComponent'
 
-export {TopPageComponent}
+export { TopPageComponent }

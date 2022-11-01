@@ -1,5 +1,6 @@
-import {DetailedHTMLProps, HTMLAttributes, ReactNode} from "react";
+import { DetailedHTMLProps, HTMLAttributes, ReactNode } from 'react'
 
-export interface SidebarProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>{
-    children?: ReactNode;
+export interface SidebarProps
+  extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
+  children?: ReactNode
 }

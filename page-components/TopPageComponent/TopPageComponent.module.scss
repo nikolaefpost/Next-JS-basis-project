@@ -1,11 +1,11 @@
-@import "styles/_mixins.scss";
-@import "styles/_colors.scss";
+@import 'styles/_mixins.scss';
+@import 'styles/_colors.scss';
 
-.page_component{
+.page_component {
   padding-right: 90px;
   margin-top: 10px;
 
-  & .title{
+  & .title {
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: baseline;
@@ -13,11 +13,10 @@
     gap: 20px;
   }
 
-  & .product{
-
+  & .product {
   }
 
-  & .hh_title{
+  & .hh_title {
     margin-top: 50px;
     display: grid;
     grid-template-columns: auto 1fr;
@@ -26,11 +25,10 @@
     gap: 20px;
   }
 
-
-  @media screen and (max-width: 680px){
+  @media screen and (max-width: 680px) {
     padding-right: 0;
 
-    & .title{
+    & .title {
       grid-template-columns: auto 1fr;
     }
   }

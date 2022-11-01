@@ -1,5 +1,5 @@
-@import "styles/_mixins.scss";
-@import "styles/_colors.scss";
+@import 'styles/_mixins.scss';
+@import 'styles/_colors.scss';
 
 //.content{
 //  background: $primary;
@@ -38,7 +38,7 @@
 //  }
 //}
 
-.content{
+.content {
   background: $primary;
   padding: 25px 30px;
   @include fonts(500, 16px, 22px, $white);
@@ -46,15 +46,15 @@
   grid-template-columns: 1fr auto auto;
   gap: 40px;
 
-  & a{
+  & a {
     cursor: pointer;
 
-    &:hover{
+    &:hover {
       color: $green-light;
     }
   }
 
-  @media screen and (max-width: 765px){
+  @media screen and (max-width: 765px) {
     grid-template-columns: 1fr;
     justify-items: center;
     gap: 16px;

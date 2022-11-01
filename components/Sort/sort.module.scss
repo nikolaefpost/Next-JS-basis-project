@@ -1,5 +1,5 @@
-@import "styles/_mixins.scss";
-@import "styles/_colors.scss";
+@import 'styles/_mixins.scss';
+@import 'styles/_colors.scss';
 
 .sort {
   display: grid;
@@ -7,23 +7,23 @@
   align-items: center;
   justify-items: end;
 
-  & button{
+  & button {
     @include fonts(400, 16px, 22px, #000000);
     cursor: pointer;
     border: none;
     background: inherit;
 
-    & svg{
+    & svg {
       visibility: hidden;
       margin-right: 8px;
     }
 
-    .hidden{
+    .hidden {
       visibility: visible;
     }
   }
 
-  & .active{
+  & .active {
     color: $primary;
   }
 }

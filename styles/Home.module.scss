@@ -1,7 +1,7 @@
-@import "mixins";
-@import "colors";
+@import 'mixins';
+@import 'colors';
 
-.home{
+.home {
   max-width: 1440px;
   margin: 0 auto;
   @include display-flex;

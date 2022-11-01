@@ -1,12 +1,12 @@
-@import "styles/_mixins.scss";
-@import "styles/_colors.scss";
+@import 'styles/_mixins.scss';
+@import 'styles/_colors.scss';
 
-.card{
+.card {
   background: $white;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
   border-radius: 5px;
 }
 
-.blue{
-  background: #F9F8FF;
+.blue {
+  background: #f9f8ff;
 }

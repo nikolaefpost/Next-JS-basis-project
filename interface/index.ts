@@ -1,3 +1,3 @@
-export * from "./menu";
-export * from "./page";
-export * from "./product";
+export * from './menu'
+export * from './page'
+export * from './product'
