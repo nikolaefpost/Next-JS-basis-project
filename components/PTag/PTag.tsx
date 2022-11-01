@@ -18,6 +18,7 @@ const PTag: FC<PTagProps> = ({
         { [styles.p14]: fontSize === 14 },
         { [styles.p18]: fontSize === 18 }
       )}
+      {...props}
     >
       {children}
     </p>
