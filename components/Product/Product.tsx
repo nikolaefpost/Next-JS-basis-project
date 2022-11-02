@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 import Card from '../Card/Card'
 import { Button, Rating, Review, ReviewForm, Tag } from '../index'
 import { declOdNumber, priceRu } from '../../helpers'
-import styles from "./product.module.scss"
+import styles from './product.module.scss'
 
 const Product = motion(
   forwardRef(
@@ -24,7 +24,8 @@ const Product = motion(
           height: 0,
         },
       }
-
+      const urlImage = (product.image.slice(0, 4) === "http")?
+          product.image : process.env.NEXT_PUBLIC_DOMAIN + product.image
       const [isReviewOpened, setIsReviewOpened] = useState<boolean>(false)
       const reviewRef = useRef<HTMLDivElement>(null)
 
@@ -45,7 +46,7 @@ const Product = motion(
             <div className={styles.logo}>
               {
                 <Image
-                  src={process.env.NEXT_PUBLIC_DOMAIN + product.image}
+                  src={urlImage}
                   width={70}
                   height={70}
                   alt={product.title}

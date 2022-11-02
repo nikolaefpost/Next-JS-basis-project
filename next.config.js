@@ -6,7 +6,7 @@ const nextConfig = {
     SERVER_API: 'https://webapplication120220426093502.azurewebsites.net',
   },
   images: {
-    domains: ['courses-top.ru'],
+    domains: ['courses-top.ru', 'cdn-bucket.hb.bizmrg.com'],
   },
   webpack(config) {
     config.module.rules.push({
