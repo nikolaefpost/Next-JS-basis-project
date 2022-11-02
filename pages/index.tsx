@@ -9,9 +9,7 @@ import { API } from '../helpers/api'
 const Home: NextPage = () => {
   return (
     <>
-      <div className={styles.home}>
-        Выберите категорию:
-      </div>
+      <div className={styles.home}>Выберите категорию:</div>
     </>
   )
 }

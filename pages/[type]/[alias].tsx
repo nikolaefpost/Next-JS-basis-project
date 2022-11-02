@@ -18,12 +18,12 @@ import { firstLevelMenu } from '../../helpers'
 import TopPageComponent from '../../page-components/TopPageComponent/TopPageComponent'
 import { API } from '../../helpers/api'
 import Head from 'next/head'
-import {Error404} from "../404";
+import { Error404 } from '../404'
 
 const TopPage: NextPage<TopPageProps> = ({ page, products, firstCategory }) => {
-  if (!page || !products) return <Error404/>
+  if (!page || !products) return <Error404 />
 
-  return(
+  return (
     <>
       <Head>
         <title>{page.metaTitle}</title>

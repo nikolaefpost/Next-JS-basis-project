@@ -24,8 +24,10 @@ const Product = motion(
           height: 0,
         },
       }
-      const urlImage = (product.image.slice(0, 4) === "http")?
-          product.image : process.env.NEXT_PUBLIC_DOMAIN + product.image
+      const urlImage =
+        product.image.slice(0, 4) === 'http'
+          ? product.image
+          : process.env.NEXT_PUBLIC_DOMAIN + product.image
       const [isReviewOpened, setIsReviewOpened] = useState<boolean>(false)
       const reviewRef = useRef<HTMLDivElement>(null)
 
