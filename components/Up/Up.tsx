@@ -20,7 +20,12 @@ const Up: FC = () => {
       initial={{ opacity: 0 }}
       // style={{opacity: scrollYProgress}}
     >
-      <ButtonIcon icon="upIcon" appearance="primary" onClick={resetScroll} />
+      <ButtonIcon
+        icon="upIcon"
+        appearance="primary"
+        onClick={resetScroll}
+        aria-label="наверх"
+      />
     </motion.div>
   )
 }

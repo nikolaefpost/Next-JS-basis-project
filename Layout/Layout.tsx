@@ -30,7 +30,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
       <a
         onFocus={() => setIsDisplayed(true)}
         onKeyDown={(key: KeyboardEvent) => skipContentAction(key)}
-        tabIndex={1}
+        tabIndex={0}
         className={cn(styles.skipLink, {
           [styles.displayed]: isDisplayed,
         })}
